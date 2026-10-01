@@ -23,6 +23,46 @@ The web version is the easiest way to use Image Padder, with a user-friendly int
 
 **Note:** Browser-based tools have resolution limits (typically 16,384 × 16,384 pixels). For very high-resolution images, HEIC/HEIF images, or video padding, use the command-line version or Python Graphical-User-Interface (GUI) below.
 
+
+## 📲 Install as an App & Use Offline (Mac, iOS & Android)
+
+**Image Padder** is built as a full **Progressive Web App (PWA)** powered by a dedicated **Service Worker (`sw.js`)** and Web App Manifest (`manifest.json`). 
+
+Once installed to your desktop or smartphone:
+- ✈️ **100% Offline Capable:** The entire client-side image processing engine, canvas pipeline, and UI are pre-cached directly to persistent device storage via the **Cache Storage API**. You can pad photos in Airplane Mode with zero Wi-Fi or cellular data anytime, anywhere.
+- 🖥️ **Native Standalone Window:** Launches in its own dedicated window without browser address bars, URL fields, or tabs.
+- 🔄 **Zero-Hassle Background Updates:** When you connect to Wi-Fi, the Service Worker automatically fetches and updates any new changes pushed to GitHub.
+
+### 🍎 Mac (macOS Desktop App)
+
+You can install **Image Padder** directly as a native macOS desktop application with its own dedicated window, Dock icon, and full offline support:
+
+#### Method A: Safari (macOS Sonoma / Sequoia or newer)
+1. Open **[https://amitjoshi2724.github.io/ImagePadder/](https://amitjoshi2724.github.io/ImagePadder/)** in **Safari**.
+2. In the top menu bar, click **File** > **Add to Dock...** (or click the **Share** button in the Safari toolbar and select **Add to Dock**).
+3. Name it **Image Padder** and click **Add**.
+4. The app is saved to your `Applications` folder and pinned to your **macOS Dock**.
+5. Launch it like any native Mac app—it runs in its own window without browser tabs or address bars, and is 100% functional offline!
+
+#### Method B: Google Chrome, Brave, or Microsoft Edge
+1. Open **[https://amitjoshi2724.github.io/ImagePadder/](https://amitjoshi2724.github.io/ImagePadder/)** in **Chrome**, **Brave**, or **Edge**.
+2. Click the **Install Image Padder** icon in the right side of the address/URL bar (or go to **Settings (⋮)** > **Save and share** > **Install Image Padder...**).
+3. Click **Install**.
+4. The app opens in its own standalone desktop window and is added to your Mac's **Launchpad**, **Spotlight**, and `~/Applications/Chrome Apps` folder.
+
+### 🍏 iPhone & iPad (iOS Safari)
+1. Open **[https://amitjoshi2724.github.io/ImagePadder/](https://amitjoshi2724.github.io/ImagePadder/)** in **Safari**.
+2. Tap the **Share** button at the bottom of the screen (the square with an arrow pointing upward).
+3. Scroll down the share sheet and tap **"Add to Home Screen"**.
+4. Tap **Add** in the top-right corner. A dedicated Image Padder icon will appear on your home screen.
+5. Tap the new icon once while online to let the Service Worker cache all assets—after that, it is permanently usable offline!
+
+### 🤖 Android (Google Chrome)
+1. Open **[https://amitjoshi2724.github.io/ImagePadder/](https://amitjoshi2724.github.io/ImagePadder/)** in **Google Chrome**.
+2. Tap the **three-dots menu (⋮)** in the top-right corner.
+3. Tap **"Install app"** (or **"Add to Home screen"**).
+4. Tap **Install** on the prompt. The app will install directly to your home screen and app drawer as an offline-ready utility app.
+
 ## Padding Images and Videos Locally ##
 
 ### Installation ###

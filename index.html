@@ -6,6 +6,12 @@
     <title>Image Padder</title>
     <!-- PyScript dependencies removed -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Image Padder">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Basic styling for a clean, modern UI */
@@ -1757,6 +1763,13 @@
             swipeArea.removeEventListener('touchend', handleTouchEnd);
         }
     });
+        if ('serviceWorker' in navigator && (window.location.protocol === 'http:' || window.location.protocol === 'https:')) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('[PWA] ImagePadder ServiceWorker registered:', reg.scope))
+                    .catch(err => console.warn('[PWA] ServiceWorker error:', err));
+            });
+        }
     </script>
 </body>
 </html>
